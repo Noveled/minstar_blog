@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "Profile"
 image: profile.jpg
 about:
   template: jolla
@@ -10,5 +10,4 @@ about:
 
 ---
 profile
-About this blog
-여기에 무언가 소개를 적어넣으면 댑니다~~
+자기소개를 하는 공간입니다?

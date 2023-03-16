@@ -7,10 +7,9 @@ website:
   navbar:
     right:
       - about.qmd
+      - profile.qmd
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        href: https://github.com/Noveled/minstar_blog/
 format:
   html:
     theme: lux

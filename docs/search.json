@@ -25,6 +25,13 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this blog 여기에 무언가 소개를 적어넣으면 댑니다~~"
+    "text": "profile About this blog 여기에 무언가 소개를 적어넣으면 댑니다~~"
+  },
+  {
+    "objectID": "profile.html",
+    "href": "profile.html",
+    "title": "Profile",
+    "section": "",
+    "text": "profile 자기소개를 하는 공간입니다?"
   }
 ]
