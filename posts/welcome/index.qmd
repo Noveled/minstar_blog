@@ -1,12 +1,52 @@
 ---
-title: "Welcome To My Blog"
-author: "Tristan O'Malley"
-date: "2023-03-11"
+title: "마크다운 문법 연습"
+author: "minstar"
+date: "2023-03-16"
 categories: [news]
 ---
 
-This is the first post in a Quarto blog. Welcome!
-
+여기엔 먼가 귀여운 움짤 하나. 사이즈는 포스팅 공간 여백에 딱 맞춰서!
+아래의 코드를 적당히 바꿔주면 될 것 같은데...
 ![](thumbnail.jpg)
 
-Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.
+여기는 본문을 적는 공간
+
+마크다운 문법을 따로 익혀야하는게 귀찮아서 미루고 있었는데 이번 블로그 만들기 & 포스팅이 좋은 기회가 될 듯 하다.
+
+여기서 부터는 마크다운 문법 연습
+문법 링크 : https://quarto.org/docs/authoring/markdown-basics.html
+
+## H1 - H6
+제목이나 머릿글 작성할 때 사용. H1-H6까지 있음.
+\# 이후 H1 과 같이 사용할 수 있음.
+각 타입마다 사용하는 영역이 있었는데... 나중에 정리할 것.
+
+## 블럭 인용 문자
+대화, 인용, 특별 어구 따위를 나타낼 때 사용.
+> 에러 발생 : 이상하다, 왜 안되지?
+> 에러 없음 : 이상하다, 왜 되지?
+왜 진짜 안댐?
+
+
+## 코드
+코드를 작성할 때 사용.
+\''' 언어이름 과 같은 형식으로 사용 가능.
+출력 결과는 따로 안보여주는 듯.
+```python
+print('1 + 1 = ', 1 + 1)
+```
+
+## 비디오
+유튜브 링크를 가져올 수 있음. 다른 링크도 가능한가?
+-> 링크 가져올때 공유하기 이후 짧은 링크로 가져와야 동작함.
+{{< video https://youtu.be/cbuZfY2S2UQ >}}
+
+## 경고? 주의문
+:::{.callout-경고}
+이 강을 건너지 마시오.: 
+`강에`, `악어`, `살고있음`, and `배고픔`.
+:::
+
+
+<p> p태그나 span태그 등 html 태그도 사용 가능 </p>
+css나 자바스크립트도 적용 가능 할 듯 한데...

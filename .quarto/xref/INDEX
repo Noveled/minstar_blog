@@ -13,5 +13,17 @@
   },
   "profile.qmd": {
     "profile.html": "3034385b"
+  },
+  "posts/new-post-01/index.qmd": {
+    "index.html": "2c0db8c4"
+  },
+  "posts/new-post-02/index.qmd": {
+    "index.html": "27435071"
+  },
+  "posts/new-post-03/index.qmd": {
+    "index.html": "945eb6b5"
+  },
+  "posts/new-post-03/week_1b_pandas_exam.ipynb": {
+    "week_1b_pandas_exam.html": "e3814bee"
   }
 }

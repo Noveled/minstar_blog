@@ -2,8 +2,11 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html"
+      "/posts/new-post-02/index.html",
+      "/posts/new-post-03/week_1b_pandas_exam.html",
+      "/posts/new-post-01/index.html",
+      "/posts/welcome/index.html",
+      "/posts/post-with-code/index.html"
     ]
   }
 ]

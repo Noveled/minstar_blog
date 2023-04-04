@@ -9,5 +9,7 @@ about:
       href: https://github.com/Noveled/minstar_blog/
 
 ---
-profile
-자기소개를 하는 공간입니다?
+minstar
+한남대 비즈니스통계학과 4학년
+컴퓨터공학과 다전공중...
+<ul> Email : noveled.siina@gmail.com </ul>

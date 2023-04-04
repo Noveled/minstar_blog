@@ -1,14 +1,17 @@
 ---
-title: "About"
+title: "minstar_blog"
 image: profile.jpg
 about:
   template: jolla
   links:
-    - icon: github
-      text: Github
-      href: https://github.com/Noveled/minstar_blog/
+    - icon: person-square
+      text: 내소개
+      href: https://noveled.github.io/minstar_blog/profile.html
 
 ---
 profile
 About this blog
-여기에 무언가 소개를 적어넣으면 댑니다~~
+수업 참여 겸 그날 공부한 내용들을 정리할 블로그.<br>
+<br>
+아래로는 업로드할 내용들<br>
+데이터마이닝 수업 코드, 코딩테스트 문제풀이, 그냥 내 생각<br>
