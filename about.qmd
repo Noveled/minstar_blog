@@ -9,9 +9,8 @@ about:
       href: https://noveled.github.io/minstar_blog/profile.html
 
 ---
-profile
 About this blog
 수업 참여 겸 그날 공부한 내용들을 정리할 블로그.<br>
 <br>
 아래로는 업로드할 내용들<br>
-데이터마이닝 수업 코드, 코딩테스트 문제풀이, 그냥 내 생각<br>
+데이터마이닝 수업 코드(python), 코딩테스트 문제풀이(ps), 그냥 내 생각(etc)<br>
