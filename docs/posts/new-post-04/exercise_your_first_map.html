@@ -219,82 +219,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <img src="https://storage.googleapis.com/kaggle-media/learn/images/2G8C53X.png" width="500"><br>
 </center>
 <p>Kiva는 “필드 파트너”라는 글로벌 네트워크를 통해 세계에서 가장 외지에 위치한 지역에까지 도달합니다. 이들 파트너는 대출자를 검증하고 서비스를 제공하며 대출을 관리하는 지역 단체입니다. 이번 연습에서는 필리핀에서의 Kiva 대출을 조사할 것입니다. Kiva의 현재 네트워크 범위를 벗어나는 지역을 파악하여 새로운 필드 파트너 모집 기회를 식별할 수 있는지 확인해보세요. 시작하려면 아래 코드 셀을 실행하여 피드백 시스템을 설정하세요.</p>
-<div class="cell" data-outputid="26237e84-1bb0-453b-b1cb-7612a166801f" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>git clone https:<span class="op">//</span>github.com<span class="op">/</span>Kaggle<span class="op">/</span>learntools.git</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>mv learntools learntools_dir</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>mv learntools_dir<span class="op">/</span>learntools learntools</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install geopandas  <span class="co"># 코랩은 이거만 해도 댐</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Cloning into 'learntools'...
-remote: Enumerating objects: 18431, done.
-remote: Counting objects: 100% (811/811), done.
-remote: Compressing objects: 100% (415/415), done.
-remote: Total 18431 (delta 463), reused 702 (delta 395), pack-reused 17620
-Receiving objects: 100% (18431/18431), 105.10 MiB | 13.49 MiB/s, done.
-Resolving deltas: 100% (13575/13575), done.
-Updating files: 100% (653/653), done.
-Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Collecting geopandas
-  Downloading geopandas-0.12.2-py3-none-any.whl (1.1 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 13.8 MB/s eta 0:00:00
-Collecting pyproj&gt;=2.6.1.post1
-  Downloading pyproj-3.5.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (7.7 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.7/7.7 MB 26.7 MB/s eta 0:00:00
-Requirement already satisfied: shapely&gt;=1.7 in /usr/local/lib/python3.10/dist-packages (from geopandas) (2.0.1)
-Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from geopandas) (23.1)
-Requirement already satisfied: pandas&gt;=1.0.0 in /usr/local/lib/python3.10/dist-packages (from geopandas) (1.5.3)
-Collecting fiona&gt;=1.8
-  Downloading Fiona-1.9.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.0 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.0/16.0 MB 32.0 MB/s eta 0:00:00
-Collecting munch&gt;=2.3.2
-  Downloading munch-2.5.0-py2.py3-none-any.whl (10 kB)
-Requirement already satisfied: click~=8.0 in /usr/local/lib/python3.10/dist-packages (from fiona&gt;=1.8-&gt;geopandas) (8.1.3)
-Requirement already satisfied: attrs&gt;=19.2.0 in /usr/local/lib/python3.10/dist-packages (from fiona&gt;=1.8-&gt;geopandas) (23.1.0)
-Collecting click-plugins&gt;=1.0
-  Downloading click_plugins-1.1.1-py2.py3-none-any.whl (7.5 kB)
-Requirement already satisfied: certifi in /usr/local/lib/python3.10/dist-packages (from fiona&gt;=1.8-&gt;geopandas) (2022.12.7)
-Collecting cligj&gt;=0.5
-  Downloading cligj-0.7.2-py3-none-any.whl (7.1 kB)
-Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas&gt;=1.0.0-&gt;geopandas) (2022.7.1)
-Requirement already satisfied: python-dateutil&gt;=2.8.1 in /usr/local/lib/python3.10/dist-packages (from pandas&gt;=1.0.0-&gt;geopandas) (2.8.2)
-Requirement already satisfied: numpy&gt;=1.21.0 in /usr/local/lib/python3.10/dist-packages (from pandas&gt;=1.0.0-&gt;geopandas) (1.24.3)
-Requirement already satisfied: six in /usr/local/lib/python3.10/dist-packages (from munch&gt;=2.3.2-&gt;fiona&gt;=1.8-&gt;geopandas) (1.16.0)
-Installing collected packages: pyproj, munch, cligj, click-plugins, fiona, geopandas
-Successfully installed click-plugins-1.1.1 cligj-0.7.2 fiona-1.9.3 geopandas-0.12.2 munch-2.5.0 pyproj-3.5.0</code></pre>
-</div>
+<div class="cell" data-outputid="26237e84-1bb0-453b-b1cb-7612a166801f">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!pip install geopandas  # 코랩은 이거만 해도 댐</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#from learntools.core import binder</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># binder.bind(globals())</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># from learntools.geospatial.ex1 import *</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#binder.bind(globals())</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># from learntools.geospatial.ex1 import *</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="데이터-가져오기." class="level3">
 <h3 class="anchored" data-anchor-id="데이터-가져오기.">1) 데이터 가져오기.</h3>
 <p>다음 셀을 사용하여 <code>loans_filepath</code>에서 로드된 shapefile을 사용하여 GeoDataFrame <code>world_loans</code>를 생성하세요.</p>
 <div class="cell" data-outputid="9b61f089-aedb-4173-8c8c-e574fed758ca" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> drive</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>drive.mount(<span class="st">'/content/drive'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> drive</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>drive.mount(<span class="st">'/content/drive'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Mounted at /content/drive</code></pre>
 </div>
 </div>
 <div class="cell" data-outputid="3d841fa6-069e-48ba-c139-ac90e39d4f56" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>loans_filepath <span class="op">=</span> <span class="st">"/content/drive/MyDrive/2023 데이터마이닝/dataset/kiva_loans/kiva_loans.shp"</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here: Load the data</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>world_loans <span class="op">=</span> gpd.read_file(loans_filepath)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Uncomment to view the first five rows of the data</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>world_loans.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>loans_filepath <span class="op">=</span> <span class="st">"/content/drive/MyDrive/2023 데이터마이닝/dataset/kiva_loans/kiva_loans.shp"</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here: Load the data</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>world_loans <span class="op">=</span> gpd.read_file(loans_filepath)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Uncomment to view the first five rows of the data</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>world_loans.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 
 
@@ -449,11 +397,11 @@ Successfully installed click-plugins-1.1.1 cligj-0.7.2 fiona-1.9.3 geopandas-0.1
 <h3 class="anchored" data-anchor-id="데이터-시각화하기.">2) 데이터 시각화하기.</h3>
 <p>다음 코드 셀을 수정하지 않고 실행하여 국가 경계를 포함하는 <code>world</code> GeoDataFrame을 로드하세요.</p>
 <div class="cell" data-outputid="f417c521-f82e-474d-e822-be13115c05e1" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This dataset is provided in GeoPandas</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>world_filepath <span class="op">=</span> gpd.datasets.get_path(<span class="st">'naturalearth_lowres'</span>)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>world <span class="op">=</span> gpd.read_file(world_filepath)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>world.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This dataset is provided in GeoPandas</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>world_filepath <span class="op">=</span> gpd.datasets.get_path(<span class="st">'naturalearth_lowres'</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>world <span class="op">=</span> gpd.read_file(world_filepath)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>world.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 
 
@@ -599,16 +547,16 @@ Successfully installed click-plugins-1.1.1 cligj-0.7.2 fiona-1.9.3 geopandas-0.1
 </div>
 <p><code>world</code>와 <code>world_loans</code> GeoDataFrame을 사용하여 전 세계 Kiva 대출 위치를 시각화하세요.</p>
 <div class="cell" data-outputid="4dc29b31-68f2-451c-9d56-6e8eec5e68b3" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a base map with county boundaries</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> world.plot(figsize<span class="op">=</span>(<span class="dv">20</span>,<span class="dv">20</span>), color<span class="op">=</span><span class="st">'whitesmoke'</span>, linestyle<span class="op">=</span><span class="st">':'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Add wild lands, campsites, and foot trails to the base map</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>world_loans.plot(color<span class="op">=</span><span class="st">'blue'</span>, ax<span class="op">=</span>ax, markersize<span class="op">=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a base map with county boundaries</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> world.plot(figsize<span class="op">=</span>(<span class="dv">20</span>,<span class="dv">20</span>), color<span class="op">=</span><span class="st">'whitesmoke'</span>, linestyle<span class="op">=</span><span class="st">':'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Add wild lands, campsites, and foot trails to the base map</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>world_loans.plot(color<span class="op">=</span><span class="st">'blue'</span>, ax<span class="op">=</span>ax, markersize<span class="op">=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>&lt;Axes: &gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="exercise_your_first_map_files/figure-html/cell-9-output-2.png" class="img-fluid"></p>
+<p><img src="exercise_your_first_map_files/figure-html/cell-7-output-2.png" class="img-fluid"></p>
 </div>
 </div>
 </section>
@@ -616,7 +564,7 @@ Successfully installed click-plugins-1.1.1 cligj-0.7.2 fiona-1.9.3 geopandas-0.1
 <h3 class="anchored" data-anchor-id="필리핀을-기반으로-하는-대출-선택하기.">3) 필리핀을 기반으로 하는 대출 선택하기.</h3>
 <p>이제 필리핀에 기반을 둔 대출에 초점을 맞출 것입니다. 다음 코드 셀을 사용하여 필리핀에 기반을 둔 대출이 포함된 <code>world_loans</code>의 모든 행을 포함하는 GeoDataFrame인 <code>PHL_loans</code>을 만드세요.</p>
 <div class="cell" data-outputid="28d7de7b-9232-4939-96d0-37e61018ad8d" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>world_loans</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>world_loans</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 
 
@@ -828,9 +776,9 @@ Successfully installed click-plugins-1.1.1 cligj-0.7.2 fiona-1.9.3 geopandas-0.1
 </div>
 </div>
 <div class="cell" data-outputid="c6c2e64e-dc13-4a44-8f87-d24b756ee972" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>PHL_loans <span class="op">=</span> world_loans.loc[world_loans.country<span class="op">==</span><span class="st">'Philippines'</span>].copy()</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>PHL_loans.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>PHL_loans <span class="op">=</span> world_loans.loc[world_loans.country<span class="op">==</span><span class="st">'Philippines'</span>].copy()</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>PHL_loans.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 
 
@@ -985,10 +933,10 @@ Successfully installed click-plugins-1.1.1 cligj-0.7.2 fiona-1.9.3 geopandas-0.1
 <h3 class="anchored" data-anchor-id="필리핀의-대출-이해하기.">4) 필리핀의 대출 이해하기.</h3>
 <p>필리핀의 대출 이해하기. 다음 코드 셀을 수정하지 않고 실행하여 필리핀의 모든 섬의 경계를 포함하는 <code>PHL</code> GeoDataFrame을 로드하세요.</p>
 <div class="cell" data-outputid="7423cc8e-686e-4ce1-c8b3-01bee848a629" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load a KML file containing island boundaries</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>gpd.io.<span class="bu">file</span>.fiona.drvsupport.supported_drivers[<span class="st">'KML'</span>] <span class="op">=</span> <span class="st">'rw'</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>PHL <span class="op">=</span> gpd.read_file(<span class="st">"/content/drive/MyDrive/2023 데이터마이닝/dataset/Philippines_AL258.kml"</span>, driver<span class="op">=</span><span class="st">'KML'</span>)</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>PHL.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load a KML file containing island boundaries</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>gpd.io.<span class="bu">file</span>.fiona.drvsupport.supported_drivers[<span class="st">'KML'</span>] <span class="op">=</span> <span class="st">'rw'</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>PHL <span class="op">=</span> gpd.read_file(<span class="st">"/content/drive/MyDrive/2023 데이터마이닝/dataset/Philippines_AL258.kml"</span>, driver<span class="op">=</span><span class="st">'KML'</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>PHL.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 
 
@@ -1116,14 +1064,14 @@ Successfully installed click-plugins-1.1.1 cligj-0.7.2 fiona-1.9.3 geopandas-0.1
 </div>
 <p><code>PHL</code>과 <code>PHL_loans</code> GeoDataFrame을 사용하여 필리핀의 대출을 시각화하세요.</p>
 <div class="cell" data-outputid="dcb26631-b332-4a39-9c44-409e308fcf3f" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>ax1 <span class="op">=</span> PHL.plot(figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">10</span>), color<span class="op">=</span><span class="st">'whitesmoke'</span>, linestyle<span class="op">=</span><span class="st">':'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>PHL_loans.plot(color<span class="op">=</span><span class="st">'blue'</span>, ax<span class="op">=</span>ax1, markersize<span class="op">=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>ax1 <span class="op">=</span> PHL.plot(figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">10</span>), color<span class="op">=</span><span class="st">'whitesmoke'</span>, linestyle<span class="op">=</span><span class="st">':'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>PHL_loans.plot(color<span class="op">=</span><span class="st">'blue'</span>, ax<span class="op">=</span>ax1, markersize<span class="op">=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="12">
 <pre><code>&lt;Axes: &gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="exercise_your_first_map_files/figure-html/cell-13-output-2.png" class="img-fluid"></p>
+<p><img src="exercise_your_first_map_files/figure-html/cell-11-output-2.png" class="img-fluid"></p>
 </div>
 </div>
 <p>어떤 섬에서 새로운 필드 파트너를 모집하는 것이 유용할지 식별할 수 있나요?<br>
@@ -1136,15 +1084,12 @@ Kiva의 도달 범위를 벗어나 보이는 섬이 있나요?<br>
 추가적으로 해당 지역의 평균 소득도 데이터가 있다면 같이 살펴보면 좋을듯하다.</p>
 <p>이를 한줄로 정리하자면<br>
 필리핀 중앙의 mindoro 섬이나 남쪽의 큰 섬을 공략해보는게 좋을듯 하다.</p>
-</section>
-</section>
-<section id="keep-going" class="level1">
-<h1>Keep going</h1>
-<p>Continue to learn about <strong><a href="https://www.kaggle.com/alexisbcook/coordinate-reference-systems">coordinate reference systems</a></strong>.</p>
+<p>다음에 진행할 연습문제 <strong><a href="https://www.kaggle.com/alexisbcook/coordinate-reference-systems">coordinate reference systems</a></strong>.</p>
 <hr>
 <p><em>Have questions or comments? Visit the <a href="https://www.kaggle.com/learn/geospatial-analysis/discussion">course discussion forum</a> to chat with other learners.</em></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
