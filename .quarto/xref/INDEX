@@ -28,5 +28,17 @@
   },
   "posts/new-post-04/exercise_your_first_map.ipynb": {
     "exercise_your_first_map.html": "43d1be89"
+  },
+  "posts/new-post-05/exercise_coordinate_reference_systems.ipynb": {
+    "exercise_coordinate_reference_systems.html": "a75b0242"
+  },
+  "posts/new-post-06/exercise_interactive_maps.ipynb": {
+    "exercise_interactive_maps.html": "587491d6"
+  },
+  "posts/new-post-08/exercise_proximity_analysis.ipynb": {
+    "exercise_proximity_analysis.html": "6586a874"
+  },
+  "posts/new-post-07/exercise_manipulating_geospatial_data.ipynb": {
+    "exercise_manipulating_geospatial_data.html": "66e34d1b"
   }
 }

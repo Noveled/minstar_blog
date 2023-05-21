@@ -2,6 +2,10 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/new-post-08/exercise_proximity_analysis.html",
+      "/posts/new-post-07/exercise_manipulating_geospatial_data.html",
+      "/posts/new-post-06/exercise_interactive_maps.html",
+      "/posts/new-post-05/exercise_coordinate_reference_systems.html",
       "/posts/new-post-04/exercise_your_first_map.html",
       "/posts/new-post-03/week_1b_pandas_exam.html",
       "/posts/new-post-02/index.html",
