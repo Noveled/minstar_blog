@@ -1,0 +1,18 @@
+---
+title: "크롬 공룡 게임 AI"
+author: "minstar"
+date: "2023-06-03"
+categories: 
+  - python
+  - dl
+image: "공룡게임.png"
+---
+Genetic Dino
+<img src = "https://github.com/kairess/genetic_dino/raw/master/result.gif">
+https://github.com/kairess/genetic_dino
+
+크롬 공룡 게임 고득점을 위한 AI 알고리즘 테스트.
+
+우선 정답에 가까운 유전알고리즘 코드를 가져왔음.
+
+이후 수업 들으면서 알고리즘 부분만 잘 수정해보는게 목표.

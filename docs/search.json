@@ -4,7 +4,14 @@
     "href": "posts/post-with-code/index.html",
     "title": "블로그 개발 방향",
     "section": "",
-    "text": "우선 기본적인 구조 파악하기. 새로운 글을 작성하는 방식이나 정렬 순서. 내가 만든 css나 js 파일도 적용 시킬 수 있나?\n포스팅 된 글들의 정렬 순서가 궁금함. 실험해본 결과 ‘date’ 날짜에 따라 우선 정렬을 하는 것 까지는 확인했는데 같은 날짜의 포스팅의 경우 어떤 우선순위로 정렬하는지 알 수 없었음. 문서를 작성한 순서도, 폴더 이름도, 제목도 아님… 뭐지?\n적절한 카테고리 설정도 필요해보임. 우선 필요한 카테고리들을 정리해보자면… 데이터 마이닝, 코딩테스트, 개인적인 생각 정리, 기타"
+    "text": "우선 기본적인 구조 파악하기. 새로운 글을 작성하는 방식이나 정렬 순서. 내가 만든 css나 js 파일도 적용 시킬 수 있나? -> 공식 문서 참고할 것 https://quarto.org/docs/websites/website-listings.html https://quarto.org/docs/websites/website-blog.html\n포스팅 된 글들의 정렬 순서가 궁금함. 실험해본 결과 ‘date’ 날짜에 따라 우선 정렬을 하는 것 까지는 확인했는데 같은 날짜의 포스팅의 경우 어떤 우선순위로 정렬하는지 알 수 없었음. 문서를 작성한 순서도, 폴더 이름도, 제목도 아님… 뭐지? -> 공식 문서 찾음. 수정할 예정\n적절한 카테고리 설정도 필요해보임. 우선 필요한 카테고리들을 정리해보자면… ML/DL, 코딩테스트, 생각 정리, 기타"
+  },
+  {
+    "objectID": "posts/dl-post-01/index.html",
+    "href": "posts/dl-post-01/index.html",
+    "title": "크롬 공룡 게임 AI",
+    "section": "",
+    "text": "Genetic Dino  https://github.com/kairess/genetic_dino\n크롬 공룡 게임 고득점을 위한 AI 알고리즘 테스트.\n우선 정답에 가까운 유전알고리즘 코드를 가져왔음.\n이후 수업 들으면서 알고리즘 부분만 잘 수정해보는게 목표."
   },
   {
     "objectID": "posts/new-post-02/index.html",
@@ -368,7 +375,7 @@
     "href": "index.html",
     "title": "minstar",
     "section": "",
-    "text": "빅리더 1주차 02일 Pandas\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJun 27, 2023\n\n\nminstar\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKaggle_exercise_05\n\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2023\n\n\nminstar\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKaggle_exercise_04\n\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nMay 18, 2023\n\n\nminstar\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKaggle_exercise_03\n\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nMay 17, 2023\n\n\nminstar\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKaggle_exercise_02\n\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nMay 14, 2023\n\n\nminstar\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKaggle_exercise_01\n\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nMay 2, 2023\n\n\nminstar\n\n\n\n\n\n\n  \n\n\n\n\n새로 추가한 포스팅3333\n\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nApr 4, 2023\n\n\nminstar\n\n\n\n\n\n\n  \n\n\n\n\n새로 추가한 포스팅22222\n\n\n\n\n\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nMar 17, 2023\n\n\nminstar\n\n\n\n\n\n\n  \n\n\n\n\n새로 추가한 포스팅3333\n\n\n\n\n\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nMar 17, 2023\n\n\nminstar\n\n\n\n\n\n\n  \n\n\n\n\n마크다운 문법 연습\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nMar 16, 2023\n\n\nminstar\n\n\n\n\n\n\n  \n\n\n\n\n블로그 개발 방향\n\n\n\n\n\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\nminstar\n\n\n\n\n\n\nNo matching items"
+    "text": "빅리더 1주차 02일 Pandas\n\n\n\n\n\n\n\npython\n\n\ncode\n\n\n\n\n\n\n\n\n\n\n\nJun 27, 2023\n\n\nminstar\n\n\n\n\n\n\n  \n\n\n\n\n크롬 공룡 게임 AI\n\n\n\n\n\n\n\npython\n\n\ndl\n\n\n\n\n\n\n\n\n\n\n\nJun 3, 2023\n\n\nminstar\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKaggle_exercise_05\n\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2023\n\n\nminstar\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKaggle_exercise_04\n\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nMay 18, 2023\n\n\nminstar\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKaggle_exercise_03\n\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nMay 17, 2023\n\n\nminstar\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKaggle_exercise_02\n\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nMay 14, 2023\n\n\nminstar\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKaggle_exercise_01\n\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nMay 2, 2023\n\n\nminstar\n\n\n\n\n\n\n  \n\n\n\n\n새로 추가한 포스팅3333\n\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nApr 4, 2023\n\n\nminstar\n\n\n\n\n\n\n  \n\n\n\n\n새로 추가한 포스팅22222\n\n\n\n\n\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nMar 17, 2023\n\n\nminstar\n\n\n\n\n\n\n  \n\n\n\n\n새로 추가한 포스팅3333\n\n\n\n\n\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nMar 17, 2023\n\n\nminstar\n\n\n\n\n\n\n  \n\n\n\n\n마크다운 문법 연습\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nMar 16, 2023\n\n\nminstar\n\n\n\n\n\n\n  \n\n\n\n\n블로그 개발 방향\n\n\n\n\n\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\nminstar\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
