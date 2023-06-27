@@ -7,9 +7,9 @@ categories:
   - dl
 image: "공룡게임.png"
 ---
-Genetic Dino
-<img src = "https://github.com/kairess/genetic_dino/raw/master/result.gif">
-https://github.com/kairess/genetic_dino
+Genetic Dino <br>
+<img src = "https://github.com/kairess/genetic_dino/raw/master/result.gif"> <br>
+<a href = "https://github.com/kairess/genetic_dino">https://github.com/kairess/genetic_dino</a>
 
 크롬 공룡 게임 고득점을 위한 AI 알고리즘 테스트.
 

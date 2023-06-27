@@ -46,5 +46,11 @@
   },
   "posts/dl-post-01/index.qmd": {
     "index.html": "68119291"
+  },
+  "posts/bigleader-00/index.qmd": {
+    "index.html": "d95b353b"
+  },
+  "posts/bigleader-01/빅리더_1주차_02일_Pandas.ipynb": {
+    "빅리더_1주차_02일_Pandas.html": "a2444d84"
   }
 }

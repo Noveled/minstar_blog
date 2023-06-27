@@ -2,7 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/new-post-09/빅리더_1주차_02일_Pandas.html",
+      "/posts/bigleader-01/빅리더_1주차_02일_Pandas.html",
+      "/posts/bigleader-00/index.html",
       "/posts/dl-post-01/index.html",
       "/posts/new-post-08/exercise_proximity_analysis.html",
       "/posts/new-post-07/exercise_manipulating_geospatial_data.html",
