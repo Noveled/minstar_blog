@@ -1,0 +1,20 @@
+---
+title: "빅리더 시각화 (PowerBI & Tableau)"
+author: "minstar"
+date: "2023-07-05"
+categories: 
+  - bigleader
+  - 시각화
+image: "image.jpg"
+---
+
+### 시각화 참고 노트
+
+시각화 할때는 색상도 중요함. 기업의 매인 컬러
+근데 이부분은 디자인적인 영역이 아닌가 싶음
+
+시각화 로직
+
+### 전처리 참고 노트
+
+전처리 로직

@@ -3,7 +3,7 @@ title: "빅리더 알고리즘 특강 1주차"
 author: "minstar"
 date: "2023-07-02"
 categories:
-  - python
+  - ps
   - bigleader
 image: "image.jpg"
 ---
