@@ -2,6 +2,10 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/post-with-code/index.html",
+      "/posts/bigleader-01-07/index.html",
+      "/posts/bigleader-01-06/index.html",
+      "/posts/bigleader-01-05/index.html",
       "/posts/bigleader-01-03/bigleader_01_week01_03.html",
       "/posts/bigleader-01-04/bigleader_01_week01_04.html",
       "/posts/bigleader-01-02/bigleader_01_week01_02.html",
@@ -16,8 +20,7 @@
       "/posts/new-post-03/week_1b_pandas_exam.html",
       "/posts/new-post-02/index.html",
       "/posts/new-post-01/index.html",
-      "/posts/welcome/index.html",
-      "/posts/post-with-code/index.html"
+      "/posts/welcome/index.html"
     ]
   }
 ]
