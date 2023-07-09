@@ -1,18 +1,11 @@
 ---
-title: "크롬 공룡 게임 AI"
+title: "세아베스틸 채민석 전무님 특강"
 author: "minstar"
-date: "2023-06-03"
+date: "2023-07-07"
 categories: 
-  - python
-  - dl
-image: "공룡게임.png"
+  - bigleader
+  - 특강
+image: "image.png"
 ---
-Genetic Dino <br>
-<img src = "https://github.com/kairess/genetic_dino/raw/master/result.gif"> <br>
-<a href = "https://github.com/kairess/genetic_dino">https://github.com/kairess/genetic_dino</a>
 
-크롬 공룡 게임 고득점을 위한 AI 알고리즘 테스트.
-
-우선 정답에 가까운 유전알고리즘 코드를 가져왔음.
-
-이후 수업 들으면서 알고리즘 부분만 잘 수정해보는게 목표.
+노트에 메모한 내용 옮기는 중 ... 
