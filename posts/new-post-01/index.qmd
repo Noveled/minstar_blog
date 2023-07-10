@@ -1,8 +1,0 @@
----
-title: "새로 추가한 포스팅3333"
-author: "minstar"
-date: "2023-03-17"
-categories: [analysis]
-image: "image.jpg"
----
-새로 추가한 포스팅입니다.
