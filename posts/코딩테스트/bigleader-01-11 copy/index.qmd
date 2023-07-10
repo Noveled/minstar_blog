@@ -1,0 +1,11 @@
+---
+title: "다중 폴더 테스트"
+author: "minstar"
+date: "2023-07-06"
+categories: 
+  - bigleader
+  - 시각화
+image: "image.jpg"
+---
+코딩테스트 폴더 아래의 코딩테스트 포스팅입니다.
+
