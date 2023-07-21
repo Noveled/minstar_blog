@@ -112,5 +112,17 @@
   },
   "posts/basic-statistics-01/index.qmd": {
     "index.html": "54ad5470"
+  },
+  "posts/ml-03-데이터전처리/index.qmd": {
+    "index.html": "10bd3986"
+  },
+  "posts/ml-02-머신러닝미리보기/index.qmd": {
+    "index.html": "e536fd1a"
+  },
+  "posts/ml-01-머신러닝목차/index.qmd": {
+    "index.html": "b7baafd1"
+  },
+  "posts/ml-00-ML메뉴얼북/index.qmd": {
+    "index.html": "317f588d"
   }
 }

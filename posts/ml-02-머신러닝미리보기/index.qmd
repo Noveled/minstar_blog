@@ -1,0 +1,40 @@
+---
+title: "머신러닝 분류"
+author: "minstar"
+date: "2023-07-21"
+categories:
+  - 머신러닝
+image: "image.jpg"
+---  
+내가 볼라고 요약하는중.
+
+머신러닝 분류
+
+**지도학습**
+데이터가 피쳐와 타겟 변수로 분리가 됨. 
+
+- k-최근접 이웃 (k-nearest neighbors)  
+- 선형 회귀 (linear regression)  
+- 로지스틱 회귀 (logistic regression)
+- 서포트 벡터 머신 (support vector machine)
+- 결정 트리 (decision tree)
+- 랜덤 포레스트 (random forest)
+
+**비지도학습**
+타겟 변수가 없이 학습시키는 모델.
+
+군집
+- k-평균 (k-means)
+- DBSCAN
+- 계층 군집 분석
+이상치 탐지와 특이치 탐지
+- 원-클래스
+- 아이솔레이션 포레스트
+시각화와 차원축소
+- 주성분 분석 (principal component analysis)
+- 커널
+- 지역적 선형 임베딩
+연관 규칙 학습
+- 어플라이어리
+- 이클렛
+
